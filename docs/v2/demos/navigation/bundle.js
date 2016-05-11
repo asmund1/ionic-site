@@ -21389,7 +21389,7 @@
 	 * The Platform service can be used to get information about your current device.
 	 * You can get all of the platforms associated with the device using the [platforms](#platforms)
 	 * method, including whether the app is being viewed from a tablet, if it's
-	 * on a mobile device or browser, and the exact platform (ios, android, etc).
+	 * on a mobile device or browser, and the exact platform (iOS, Android, etc).
 	 * You can also get the orientation of the device, if it uses right-to-left
 	 * language direction, and much much more. With this information you can completely
 	 * customize your app to fit any device.
@@ -21470,8 +21470,8 @@
 	     *     this.platform = platform;
 	     *
 	     *     if (this.platform.is('ios')) {
-	     *       // This will only print when on ios
-	     *       console.log("I'm an ios device!");
+	     *       // This will only print when on iOS
+	     *       console.log("I'm an iOS device!");
 	     *     }
 	     *   }
 	     * }
@@ -44821,7 +44821,7 @@
 	        return promise;
 	    };
 	    /**
-	     * Progamatically close they keyboard
+	     * Programmatically close the keyboard
 	     *
 	     */
 	    Keyboard.prototype.close = function () {
@@ -49431,7 +49431,7 @@
 	/**
 	 * @name ViewController
 	 * @description
-	 * Access various features and information about the current view
+	 * Access various features and information about the current view.
 	 * @usage
 	 *  ```ts
 	 *  import {Page, ViewController} from 'ionic-angular';
@@ -49528,7 +49528,7 @@
 	        this._leavingOpts = opts;
 	    };
 	    /**
-	     * Check to see if you can go back in the navigation stack
+	     * Check to see if you can go back in the navigation stack.
 	     * @param {boolean} Check whether or not you can go back from this page
 	     * @returns {boolean} Returns if it's possible to go back from this Page.
 	     */
@@ -49566,7 +49566,7 @@
 	    });
 	    Object.defineProperty(ViewController.prototype, "index", {
 	        /**
-	         * You can find out the index of the current view is in the current navigation stack
+	         * You can find out the index of the current view is in the current navigation stack.
 	         *
 	         * ```typescript
 	         *  export class Page1 {
@@ -61399,8 +61399,8 @@
 	 * Labels are placed inside of an `ion-item` element and can be used
 	 * to describe an `ion-input`, `ion-toggle`, `ion-checkbox`, and more.
 	 *
-	 * @property [fixed] - A persistant label that sits next the input.
-	 * @property [floating] - A label that will float about the input if the input is empty of looses focus.
+	 * @property [fixed] - A persistent label that sits next the input.
+	 * @property [floating] - A label that will float about the input if the input is empty or loses focus.
 	 * @property [stacked] - A stacked label will always appear on top of the input.
 
 	 *
@@ -65376,17 +65376,17 @@
 	 * @description
 	 *
 	 * `ion-textarea` is is used for multi-line text inputs. Ionic still
-	 * uses an actual `<textarea>` HTML element within the component,
-	 * however, with Ionic wrapping the native HTML textarea element then
-	 * Ionic is able to better handle the user experience and interactivity.
+	 * uses an actual `<textarea>` HTML element within the component;
+	 * however, with Ionic wrapping the native HTML text area element, Ionic
+	 * is able to better handle the user experience and interactivity.
 	 *
 	 * Not that `<ion-textarea>` must load its value from the `value` or
 	 * `[(ngModel)]` attribute. Unlike the native `<textarea>` element,
 	 * `<ion-textarea>` does not support loading its value from the
 	 * textarea's inner content.
 	 *
-	 * When requiring only a single-line text input it's recommended
-	 * to use `<ion-input>` instead.
+	 * When requiring only a single-line text input, we recommend using
+	 * `<ion-input>` instead.
 	 *
 	 * @usage
 	 * ```html
@@ -66565,25 +66565,38 @@
 	var radio_group_1 = __webpack_require__(361);
 	/**
 	 * @description
-	 * A radio button with a unique value. Note that all `<ion-radio>`
-	 * components must be wrapped within a `<ion-list radio-group>`,
-	 * and there must be at least two `<ion-radio>` components within
-	 * the radio group.
+	 * A radio button is a button that can be either checked or unchecked. A user can tap
+	 * the button to check or uncheck it. It can also be checked from the template using
+	 * the `checked` property.
 	 *
-	 * See the [Angular 2 Docs](https://angular.io/docs/ts/latest/guide/forms.html) for
-	 * more info on forms and input.
+	 * Use an element with a `radio-group` attribute to group a set of radio buttons. When
+	 * radio buttons are inside a [radio group](../RadioGroup), exactly one radio button
+	 * in the group can be checked at any time. If a radio button is not placed in a group,
+	 * they will all have the ability to be checked at the same time.
+	 *
+	 * See the [Angular Forms Docs](https://angular.io/docs/ts/latest/guide/forms.html) for
+	 * more information on forms and input.
 	 *
 	 * @usage
 	 * ```html
-	 *
-	 * <ion-item>
-	 *   <ion-label>Radio Label</ion-label>
-	 *   <ion-radio value="radio-value"></ion-radio>
-	 * </ion-item>
-	 *
+	 * <ion-list radio-group [(ngModel)]="relationship">
+	 *   <ion-item>
+	 *     <ion-label>Friends</ion-label>
+	 *     <ion-radio value="friends" checked></ion-radio>
+	 *   </ion-item>
+	 *   <ion-item>
+	 *     <ion-label>Family</ion-label>
+	 *     <ion-radio value="family"></ion-radio>
+	 *   </ion-item>
+	 *   <ion-item>
+	 *     <ion-label>Enemies</ion-label>
+	 *     <ion-radio value="enemies" [disabled]="isDisabled"></ion-radio>
+	 *   </ion-item>
+	 * </ion-list>
 	 * ```
 	 * @demo /docs/v2/demos/radio/
 	 * @see {@link /docs/v2/components#radio Radio Component Docs}
+	 * @see {@link ../RadioGroup RadioGroup API Docs}
 	 */
 	var RadioButton = (function () {
 	    function RadioButton(_form, _item, _group) {
@@ -66612,7 +66625,7 @@
 	    }
 	    Object.defineProperty(RadioButton.prototype, "value", {
 	        /**
-	         * @private
+	         * @input {any} The value of the radio button. Defaults to the generated id.
 	         */
 	        get: function () {
 	            // if the value is not defined then use it's unique id
@@ -66626,7 +66639,7 @@
 	    });
 	    Object.defineProperty(RadioButton.prototype, "checked", {
 	        /**
-	         * @private
+	         * @input {boolean} Whether the radio button should be checked or not. Default false.
 	         */
 	        get: function () {
 	            return this._checked;
@@ -66642,7 +66655,7 @@
 	    });
 	    Object.defineProperty(RadioButton.prototype, "disabled", {
 	        /**
-	         * @private
+	         * @input {boolean} Whether the radio button should be disabled or not. Default false.
 	         */
 	        get: function () {
 	            return this._disabled;
@@ -66677,7 +66690,7 @@
 	     */
 	    RadioButton.prototype.ngOnDestroy = function () {
 	        this._form.deregister(this);
-	        this._group.remove(this);
+	        this._group && this._group.remove(this);
 	    };
 	    __decorate([
 	        core_1.Output(), 
@@ -66752,12 +66765,13 @@
 	/**
 	 * @name RadioGroup
 	 * @description
-	 * A radio group is a group of radio button components, and its value
-	 * comes from the checked radio button's value. Selecting a radio
-	 * button in the group unchecks all others in the group.
+	 * A radio group is a group of [radio buttons](../RadioButton). It allows
+	 * a user to select at most one radio button from a set. Checking one radio
+	 * button that belongs to a radio group unchecks any previous checked
+	 * radio button within the same group.
 	 *
-	 * See the [Angular 2 Docs](https://angular.io/docs/ts/latest/guide/forms.html)
-	 * for more info on forms and inputs.
+	 * See the [Angular Forms Docs](https://angular.io/docs/ts/latest/guide/forms.html)
+	 * for more information on forms and inputs.
 	 *
 	 * @usage
 	 * ```html
@@ -66797,6 +66811,7 @@
 	 *
 	 * @demo /docs/v2/demos/radio/
 	 * @see {@link /docs/v2/components#radio Radio Component Docs}
+	 * @see {@link ../RadioButton RadioButton API Docs}
 	*/
 	var RadioGroup = (function () {
 	    function RadioGroup(_renderer, _elementRef) {

@@ -1,6 +1,6 @@
 ---
 layout: "v2_fluid/docs_base"
-version: "1.2.0"
+version: "1.2.1"
 versionHref: "/docs/v2/native"
 path: ""
 category: native
@@ -30,7 +30,7 @@ docType: "class"
 
 </h1>
 
-<a class="improve-v2-docs" href='http://github.com/driftyco/ionic-native/edit/master/src/plugins/touchid.ts#L0'>
+<a class="improve-v2-docs" href='http://github.com/driftyco/ionic-native/edit/master//home/ubuntu/ionic-native/src/plugins/touchid.ts#L0'>
   Improve this doc
 </a>
 
